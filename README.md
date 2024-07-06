@@ -54,6 +54,18 @@ $ git status # вывод список файлов со статусами stag
 ### Жизненный цикл файла в Git: создание, добавление в staging area, коммит, изменение, повторное добавление в staging area, коммит.
 ### Команда git status показывает статусы файлов: staged, modified, untracked.
 
+## Изменение статусов:
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  modified -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked/committed;
+  staged    -- "внесение изменений в файл"     --> modified;
+  <>
+  %% Схема изменения статусов
+```
+
 ----
 
 
