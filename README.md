@@ -61,7 +61,7 @@ graph LR;
   untracked -- "git add" --> staged;
   modified -- "git add" --> staged;
   staged    -- "git commit"     --> tracked/committed;
-  staged    -- "внесение изменений в файл"     --> modified;
+  tracked/committed    -- "внесение изменений в файл"     --> modified;
   
   %% Схема изменения статусов
 ```
